@@ -107,10 +107,12 @@ public class ContentActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(ContentActivity.this, MainActivity.class);
+                Intent intent = new Intent();
+//                Intent intent = new Intent(ContentActivity.this, MainActivity.class);
                 intent.putExtra("user_objectId", user_objectId);
                 intent.putExtra("username", username);
                 intent.putExtra("loginSuccess", "Login Successfully");
+                intent.setClass(ContentActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
                 break;

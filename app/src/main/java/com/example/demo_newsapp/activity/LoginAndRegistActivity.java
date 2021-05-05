@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.content.SharedPreferences;
 import android.view.WindowManager;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.demo_newsapp.R;
@@ -22,6 +25,7 @@ public class LoginAndRegistActivity extends AppCompatActivity implements View.On
 
     private EditText name_edit, password_edit;
     private Button login_btn, regist_btn;
+    private String userName,passWord,spPsw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +82,6 @@ public class LoginAndRegistActivity extends AppCompatActivity implements View.On
             }
         });
     }
-
 /*    private void registUser(String nameEdit, String passwordEdit) {
         BmobUser user = new BmobUser();
         user.setUsername(nameEdit);
